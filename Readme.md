@@ -21,3 +21,6 @@ This is a fun, user-generated archive where people can log in and submit the fun
 
 ## Why This Project: 
 I chose this project because it combines humor with full-stack development, making learning fun. It’s unique, engaging, and involves key backend concepts like authentication, database operations, and API handling. By building this, I will gain hands-on experience in user authentication, CRUD operations, API development, and database management while creating something that people can enjoy.
+
+## My opinion
+  Totally this is the project i wanted to do it has some basic features and all. This is only a basic project not a fully thing.
