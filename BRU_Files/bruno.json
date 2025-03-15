@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "BRU_Files",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
