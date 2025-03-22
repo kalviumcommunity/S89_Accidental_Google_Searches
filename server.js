@@ -1,6 +1,8 @@
  const express = require('express');
  const mongoose = require("mongoose");
 
+ require("dotenv").config();
+
 
 
 
@@ -33,7 +35,7 @@
 
  app.listen(8080, async()=>{
     try{
-      await mongoose.connect("mongodb+srv://kondurihemanth62:v9TVxQDsjQJTDdAC@cluster0.tlfsv.mongodb.net/");
+      await mongoose.connect(process.env.Mongo_URI);
       console.log("Server connected successfully");
 
     }catch(error){
