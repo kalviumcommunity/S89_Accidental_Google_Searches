@@ -1,37 +1,21 @@
- const express = require('express');
- const mongoose = require("mongoose");
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+const dotenv = require("dotenv").config();
 
- require("dotenv").config();
+app.use(express.json());
 
-
-
-
-
-
- 
-
- const app = express();
+const router = require("./router");
 
 
+app.get("/", (req, res)=>{
+    return res.send({msg:"This is creating user database"})
+})
 
-
-
-
-
- app.get("/ping", (req, res)=>{
-    
-    res.send("ping pong");
- })
-
-
-
-
-
-
-
-
+app.use("/userDetails", router);
 
  
+
 
  app.listen(8080, async()=>{
     try{
