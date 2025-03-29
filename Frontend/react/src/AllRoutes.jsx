@@ -5,7 +5,12 @@ import About from './About';
 const AllRoutes = () => {
   return (
     <Routes>
+
+
         <Route path='/' element={<About/>}/>
+
+
+        
     </Routes>
   )
 }
