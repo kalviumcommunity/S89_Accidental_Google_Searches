@@ -16,15 +16,15 @@ router.get("/getUser", async(req, res)=>{
 
 router.post("/user", async(req, res)=>{
     try{
-        const {userName, email, password, phone} = req.body;
-        if(!userName || !email || !password || !phone){
+        const {name, price, description} = req.body;
+        if(!name||!price || !description){
             return res.status(400).send({msg: "Please provide all the details"});
 
         }
 
-        const userDetails = new model({userName, email, password, phone});
+        const userDetails = new model({name, price, description});
         await userDetails.save();
-        return res.status(201).send({msg: "User created successfully", userDetails}); 
+        return res.status(201).send({msg: "product added  successfully", userDetails}); 
 
     }catch(error){
         return res.status(500).send({msg:"Something went wrong", error});
@@ -41,11 +41,11 @@ router.put("/put_user/:id", async (req, res) => {
             return res.status(401).send({ msg: "Please provide id" });
         }
 
-        const { userName, email, password, phone } = req.body;
+        const {name, price, description} = req.body;
         
         const updatedUser = await model.findByIdAndUpdate(
             id,
-            { userName, email, password , phone}, 
+            { name, price, description}, 
             { new: true }
         );
 
