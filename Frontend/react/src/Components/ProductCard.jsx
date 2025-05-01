@@ -1,15 +1,14 @@
 import React from 'react';
 import './ProductCard.css';
 
-const ProductCard = ({ name, category, price, description }) => {
+function ProductCard({ name, price, description }) {
   return (
     <div className="product-card">
-      <h2>{name}</h2>
-      <p className="category">{category}</p>
-      <p className="price">₹{price}</p>
-      <p className="description">{description}</p>
+      <h3>{name}</h3>
+      <p>Price: ₹{price}</p>
+      <p>{description}</p>
     </div>
   );
-};
+}
 
 export default ProductCard;
