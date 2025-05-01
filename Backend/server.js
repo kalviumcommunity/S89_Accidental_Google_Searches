@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
+const cors = require("cors");
 
 app.use(express.json());
 
@@ -13,6 +14,7 @@ app.get("/", (req, res)=>{
 })
 
 app.use("/userDetails", router);
+app.use(cors());
 
  
 
